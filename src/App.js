@@ -40,7 +40,7 @@ const useStyles = createStyles((theme) => ({
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundImage: `url(${bg})`,
-      height: 300,
+      height: 330,
     },
   },
   item: {
@@ -63,7 +63,7 @@ const useStyles = createStyles((theme) => ({
     marginBottom: theme.spacing.xs / 2,
     color: theme.black,
     [theme.fn.smallerThan("sm")]: {
-      fontSize: 20,
+      fontSize: 13,
       textAlign: 'center',
       maxWidth: 560,
       lineHeight: 1.2,
@@ -159,7 +159,7 @@ const useStyles = createStyles((theme) => ({
     textAlign: 'center',
     marginTop: 20,
     [theme.fn.smallerThan("sm")]: {
-      fontSize: 8,
+      fontSize: 8.2,
       textAlign: 'center',
       marginTop: 10
     },
@@ -197,7 +197,7 @@ const useStyles = createStyles((theme) => ({
   Icon2: {
     width: 40, height: 40, color: 'red',
     [theme.fn.smallerThan("sm")]: {
-      width: 25, height: 25,
+      width: 22, height: 22,
     },
   },
   IconCenter: {
@@ -213,7 +213,7 @@ const useStyles = createStyles((theme) => ({
   Action: {
     width: 130, height: 130,
     [theme.fn.smallerThan("sm")]: {
-      width: 75, height: 75,
+      width: 65, height: 65,
     },
   },
   borderRedPadding: {
@@ -239,7 +239,7 @@ const useStyles = createStyles((theme) => ({
     padding: 20,
     [theme.fn.smallerThan("sm")]: {
       marginTop: 40,
-      padding: 10
+      padding: 20
     },
   },
   imagepadding: {
