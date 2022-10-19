@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ReactDesign/static/css/main.febcdbb3.css",
+    "main.js": "/ReactDesign/static/js/main.e7644a82.js",
+    "static/media/Videologo.png": "/ReactDesign/static/media/Videologo.5c9766cf6d4e17dd75ed.png",
+    "static/media/gridimg2.png": "/ReactDesign/static/media/gridimg2.4665cd68f4ec5d5c55e4.png",
+    "static/media/gridimg.png": "/ReactDesign/static/media/gridimg.ff8428e9ebac8ca01188.png",
+    "static/media/bgtwo.png": "/ReactDesign/static/media/bgtwo.a7853ae374ea114c400c.png",
+    "static/media/bgthree.png": "/ReactDesign/static/media/bgthree.d2316e67bac590e8c076.png",
+    "static/media/bgone.png": "/ReactDesign/static/media/bgone.5bfa23c3204de2d5090f.png",
+    "static/media/bg.png": "/ReactDesign/static/media/bg.3ab848a67622ccd2934c.png",
+    "static/media/logo.png": "/ReactDesign/static/media/logo.fd48e4b6b141bc4b4a76.png",
+    "index.html": "/ReactDesign/index.html",
+    "main.febcdbb3.css.map": "/ReactDesign/static/css/main.febcdbb3.css.map",
+    "main.e7644a82.js.map": "/ReactDesign/static/js/main.e7644a82.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.febcdbb3.css",
+    "static/js/main.e7644a82.js"
+  ]
+}
