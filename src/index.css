@@ -1,13 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FDF8F4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.mantine-v4lv9f {
+  color: #000;
+  border-bottom: 1px solid #FDECE0;
+}
+
+
+@media screen and (max-width: 892px) {
+  .button-7 {
+    width: 80%;
+    display: none;
+    font-size: 10px;
+  }
+
+  .button-71 {
+    width: 100%;
+    display: block;
+    font-size: 12px;
+  }
+
+  .Yogaimage {
+    cursor: "pointer";
+    width: 90%
+  }
+
+  .Time {
+    font-size: medium;
+    font-weight: 600;
+    margin-top: 30;
+    text-align: center;
+  }
+
+  .Days {
+    font-size: small;
+  }
+
+  .Features {
+    margin: auto;
+    width: 100%;
+  }
+
+  .Title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+  }
+
+  .Desc {
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 5px;
+  }
+
+  .card-wrap_1 {
+    flex: 0 0 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 15px;
+    /* gutter width */
+  }
+
+  .NotCarousel {
+    display: none;
+  }
+
+  .carousel {
+    display: block;
+    margin-top: 20;
+  }
+
+  .Videoimg {
+    width: 100%;
+  }
+
+  .days {
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .days1 {
+    width: 100%;
+    margin-top: 20;
+  }
+
+  .center {
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 892px) {
+  .button-71 {
+    width: 80%;
+    display: none;
+    font-size: 10px;
+  }
+
+  .button-7 {
+    display: block;
+  }
+
+  .Yogaimage {
+    cursor: "pointer";
+    width: 80%
+  }
+
+  .Time {
+    font-size: x-large;
+    text-align: center;
+    margin-top: 10;
+    font-weight: 600;
+  }
+
+  .Days {
+    font-size: medium;
+  }
+
+  .Features {
+    margin: auto;
+    /* margin-top: 20px; */
+    width: 60%;
+  }
+
+  .Title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+  }
+
+  .Desc {
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .card-wrap_1 {
+    flex: 0 0 30%;
+    display: flex;
+    padding: 15px;
+    /* gutter width */
+  }
+
+  .NotCarousel {
+    display: flex;
+    margin-top: 40;
+  }
+
+  .carousel {
+    display: none;
+
+  }
+
+  .Videoimg {
+    width: 100%;
+  }
+
+  .days {
+    width: 60%;
+    margin-top: 20;
+  }
+
+  .days1 {
+    width: 80%;
+    margin-top: 20;
+  }
+}
+
+
+/* AAp.css */
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.for_background {
+  background-color: rgba(0, 0, 0, 0.404);
+}
+
+
+
+.sticky_nav_bar_header {
+  width: 100%;
+  padding: 8px 0px;
+  position: fixed;
+  z-index: 1;
+  margin-bottom: 30px;
+  background-color: #FFF3E9;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.264);
+}
+
+.nav_bar_color {
+  color: white;
+}
+
+.nav_bar_color2 {
+  color: black;
+}
+
+.container_1 {
+  display: flex;
+  margin: auto;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+
+.borderRed {
+  padding: 20px;
+}
+
+.card_1 {
+
+  flex: 0 0 100%;
+  border: 2px solid #EC322E;
+}
+
+@media only screen and (min-width: 768px) {
+  .for_float {
+    float: right;
+  }
+}
+
+@media screen and (max-width:768px) and (min-width:10px) {
+  .links {
+    display: none;
+  }
+
+  .mobile_links {
+    display: visible;
+  }
+
+
+}
+
+@media screen and (max-width:4000px) and (min-width:768px) {
+  .links {
+    display: visible;
+
+  }
+
+  .mobile_links {
+    display: none;
+  }
 }
