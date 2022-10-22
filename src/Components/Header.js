@@ -44,27 +44,11 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export default function Header({ children }) {
-    const { classes, cx } = useStyles();
 
     const [opened2, setOpened] = useState(false);
     const [openedSide, setOpenedSide] = useState(false);
 
-    const [scroll, scrollTo] = useWindowScroll();
-
-    const links = [
-        { label: "HOME", link: "/" },
-        { label: "ABOUT", link: "/about" },
-        { label: "PROFILES", link: "/profile" },
-        { label: "CONTACT", link: "/contact" },
-    ];
-
     const theme = useMantineTheme();
-    const [opened, toggleOpened] = useToggle(false);
-    const [active, setActive] = useState(links[0].link);
-
-
-
-
     return (
         <div>
             <div
@@ -103,7 +87,7 @@ export default function Header({ children }) {
                             </Button>
                         </Group>
                         <Group spacing={5} className="mobile_links">
-                            <div style={{ display: 'flex', flexDirection: 'row' }}>
+                            <div style={{ display: 'flex', flexDirection: 'row', marginLeft: 50 }}>
                                 <Button
                                     radius="xl"
                                     size="xs"

@@ -23,11 +23,11 @@ import LazyShow from "./Components/LazyShow";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
-    paddingTop: theme.spacing.xl * 2,
-    paddingBottom: theme.spacing.xl * 2,
+    paddingTop: 25,
+    paddingBottom: 25,
     [theme.fn.smallerThan("sm")]: {
-      paddingTop: 30,
-      paddingBottom: 30
+      paddingTop: 25,
+      paddingBottom: 25
     },
 
   },
@@ -35,12 +35,12 @@ const useStyles = createStyles((theme) => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundImage: `url(${bg})`,
-    height: 320,
+    height: 285,
     [theme.fn.smallerThan("sm")]: {
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundImage: `url(${bg})`,
-      height: 330,
+      height: 320,
     },
   },
   item: {
@@ -57,11 +57,10 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'center',
   },
   title: {
-    fontSize: 30,
+    fontSize: 28,
     textAlign: 'center',
-    fontWeight: 700,
+    fontWeight: 600,
     marginBottom: theme.spacing.xs / 2,
-    color: theme.black,
     [theme.fn.smallerThan("sm")]: {
       fontSize: 13,
       textAlign: 'center',
@@ -88,9 +87,9 @@ const useStyles = createStyles((theme) => ({
     },
   },
   titleHeading: {
-    fontSize: 30,
+    fontSize: 28,
     textAlign: 'center',
-    fontWeight: 700,
+    fontWeight: 600,
     marginBottom: 20,
     color: theme.black,
     [theme.fn.smallerThan("sm")]: {
@@ -122,6 +121,7 @@ const useStyles = createStyles((theme) => ({
     lineHeight: 1.2,
     fontWeight: 700,
     maxWidth: 560,
+    marginTop: 15,
     marginBottom: theme.spacing.xs / 2,
     color: "#626262",
     [theme.fn.smallerThan("sm")]: {
@@ -133,11 +133,11 @@ const useStyles = createStyles((theme) => ({
     },
   },
   Subtitletitle2: {
-    fontSize: 18,
+    fontSize: 16,
     lineHeight: 1.2,
-    maxWidth: 620,
-    marginBottom: 20,
-    marginTop: 20,
+    maxWidth: 590,
+    marginBottom: 25,
+    marginTop: 25,
     [theme.fn.smallerThan("sm")]: {
       fontSize: 12,
       textAlign: 'center',
@@ -149,12 +149,12 @@ const useStyles = createStyles((theme) => ({
     color: "#ED3843"
   },
   borderRed: {
-    border: "3px solid #EC322E",
+    border: "2px solid #EC322E",
     padding: 28,
 
   },
   description: {
-    fontSize: 18,
+    fontSize: 15,
     lineHeight: 1.2,
     textAlign: 'center',
     marginTop: 20,
@@ -165,14 +165,14 @@ const useStyles = createStyles((theme) => ({
     },
   },
   description4: {
-    fontSize: 20,
+    fontSize: 13,
     lineHeight: 1.2,
     marginTop: 20,
-    fontWeight: 600,
+    fontWeight: 550,
     [theme.fn.smallerThan("sm")]: {
-      fontSize: 12,
-      fontWeight: 600,
-      marginTop: 10
+      fontSize: 10,
+      marginTop: 10,
+      fontWeight: 550,
     },
   },
   description1: {
@@ -195,9 +195,15 @@ const useStyles = createStyles((theme) => ({
     },
   },
   Icon2: {
-    width: 40, height: 40, color: 'red',
+    width: 30, height: 30, color: 'red',
     [theme.fn.smallerThan("sm")]: {
       width: 22, height: 22,
+    },
+  },
+  Icon3: {
+    width: 40, height: 40, color: 'red',
+    [theme.fn.smallerThan("sm")]: {
+      width: 30, height: 30,
     },
   },
   IconCenter: {
@@ -211,13 +217,13 @@ const useStyles = createStyles((theme) => ({
     },
   },
   Action: {
-    width: 130, height: 130,
+    width: 90, height: 90,
     [theme.fn.smallerThan("sm")]: {
       width: 65, height: 65,
     },
   },
   borderRedPadding: {
-    padding: 40,
+    padding: 25,
     [theme.fn.smallerThan("sm")]: {
       padding: 10
     },
@@ -236,10 +242,10 @@ const useStyles = createStyles((theme) => ({
   },
   marginandpadding: {
     marginTop: 80,
-    padding: 20,
+
     [theme.fn.smallerThan("sm")]: {
       marginTop: 40,
-      padding: 20
+
     },
   },
   imagepadding: {
@@ -264,6 +270,7 @@ export function Feature({ icon: Icon, title, description }) {
       </div>
       <Text
         className={classes.title}
+        color='dark'
       >
         {title}
       </Text>
@@ -325,12 +332,13 @@ const App = () => {
       </div>
       <Container size='lg' className={classes.marginTop2}>
         <Grid>
-          <Grid.Col md={6} sm={12}>
-            <Grid className="center">
+          <Grid.Col md={0.7} sm={12}></Grid.Col>
+          <Grid.Col md={3.3} sm={12}>
+            <Grid className="center" >
               <Grid.Col span={6} >
                 <div className={classes.IconCenter}>
 
-                  <Calendar className={classes.Icon2} color='red' />
+                  <Calendar className={classes.Icon3} color='red' />
 
                   <Text className={classes.description4}>
                     5 days a week
@@ -339,7 +347,7 @@ const App = () => {
               </Grid.Col>
               <Grid.Col span={6} >
                 <div className={classes.IconCenter}>
-                  <Video className={classes.Icon2} color='red' />
+                  <Video className={classes.Icon3} color='red' />
                   <Text className={classes.description4}>
                     Live Zoom Classes
                   </Text>
@@ -347,7 +355,7 @@ const App = () => {
               </Grid.Col>
               <Grid.Col span={6} >
                 <div className={classes.IconCenter}>
-                  <Clock className={classes.Icon2} color='red' />
+                  <Clock className={classes.Icon3} color='red' />
                   <Text className={classes.description4}>
                     1 Hour Dialy
                   </Text>
@@ -355,21 +363,22 @@ const App = () => {
               </Grid.Col>
               <Grid.Col span={6} >
                 <div className={classes.IconCenter}>
-                  <Yoga className={classes.Icon2} color='red' />
+                  <Yoga className={classes.Icon3} color='red' />
                   <Text className={classes.description4}>
-                    Ongoiung Carrers
+                    Ongoing Classes
                   </Text>
                 </div>
               </Grid.Col>
-              <Grid.Col md={12} sm={12}>
+              <Grid.Col md={2} sm={12}></Grid.Col>
+              <Grid.Col md={10} sm={12}>
                 <div className={classes.main}>
                   <Button variant="gradient" className="button-7" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={20} size="xl" radius="xl">
-                    Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 5, marginRight: 5 }}> 300</span>  200 AED
+                    Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 10, marginRight: 10 }}> 300</span> <span style={{ fontWeight: 600, fontSize: 22, marginRight: 5 }}>200 </span>  AED
                   </Button>
                 </div>
                 <div className={classes.main}>
                   <Button variant="gradient" className="button-71" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={20} size="md" radius="xl">
-                    Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 5, marginRight: 5 }}> 300</span>  200 AED
+                    Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 10, marginRight: 10 }}> 300</span> <span style={{ fontWeight: 600, fontSize: 16, marginRight: 5 }}>200</span> AED
                   </Button>
                 </div>
               </Grid.Col>
@@ -377,7 +386,8 @@ const App = () => {
 
 
           </Grid.Col>
-          <Grid.Col md={6} sm={12}>
+          <Grid.Col md={1} sm={12}></Grid.Col>
+          <Grid.Col md={7} sm={12}>
             <div className={classes.main}>
               <img
                 className="Videoimg"
@@ -388,7 +398,7 @@ const App = () => {
         </Grid>
 
       </Container>
-      <Container size="lg" className={classes.wrapper} >
+      <Container size="md" className={classes.wrapper} >
         <LazyShow>
           <SimpleGrid
             cols={3}
@@ -405,37 +415,37 @@ const App = () => {
             <Grid.Col md={4}>
               <img
                 src={bgone}
-                style={{ width: 368 }}
+                style={{ width: 370 }}
               />
             </Grid.Col>
             <Grid.Col md={4}>
               <img
                 src={bgtwo}
-                style={{ width: 368 }}
+                style={{ width: 370 }}
               />
             </Grid.Col>
             <Grid.Col md={4}>
               <img
-                src={bgthree}
-                style={{ width: 368 }}
+                src={bgtwo}
+                style={{ width: 370 }}
               />
             </Grid.Col>
             <Grid.Col md={4}>
               <img
                 src={bgone}
-                style={{ width: 368 }}
+                style={{ width: 370 }}
               />
             </Grid.Col>
             <Grid.Col md={4}>
               <img
                 src={bgtwo}
-                style={{ width: 368 }}
+                style={{ width: 370 }}
               />
             </Grid.Col>
             <Grid.Col md={4}>
               <img
-                src={bgthree}
-                style={{ width: 368 }}
+                src={bgtwo}
+                style={{ width: 370 }}
               />
             </Grid.Col>
           </Grid>
@@ -484,9 +494,10 @@ const App = () => {
       <Container size="lg" className={classes.marginTop} >
 
         <Text className={classes.title}> One Hour, Multiple Benefits</Text>
-        <div class="container_1">
-          <div class="card-wrap_1">
-            <div class="card_1">
+
+        <Grid>
+          <Grid.Col md={4} sm={12} >
+            <div className='card_1'>
               <div className="borderRed">
                 <div className={classes.main}>
                   <Yoga className={classes.Icon} />
@@ -506,9 +517,10 @@ const App = () => {
                 </Text>
               </div>
             </div>
-          </div>
-          <div class="card-wrap_1">
-            <div className="card_1">
+
+          </Grid.Col>
+          <Grid.Col md={4} sm={12} >
+            <div className='card_1'>
               <div className="borderRed">
                 <div className={classes.main}>
                   <Barbell className={classes.Icon} />
@@ -527,17 +539,17 @@ const App = () => {
                   Weight Loss,Inch Loss & Fat Loss,Improved muscle-tone,Increased stamina & cardiovascular endurance,High overall physical fitness
                 </Text>
               </div>
-
             </div>
-          </div>
-          <div class="card-wrap_1">
-            <div class="card_1">
+          </Grid.Col>
+          <Grid.Col md={4} sm={12}  >
+            <div className='card_1'>
               <div className="borderRed">
                 <div className={classes.main}>
                   <Flower className={classes.Icon} />
                 </div>
                 <Text
                   className='Title'
+                  mt={10}
                 >
                   All The Benefits of Meditation
                 </Text>
@@ -546,49 +558,61 @@ const App = () => {
                   color="dimmed"
                   className='Desc'
 
+
                 >
                   Mental clarity,Emotional stability,Improved sleep,Reduction in stress levels,
                 </Text>
-              </div>
-            </div>
-          </div>
-        </div>
 
-      </Container>
-      <Container size='lg' className={classes.marginandpadding} >
-        <Grid className={classes.borderRed}>
-          <Grid.Col md={8} sm={12} className={classes.borderRedPadding}>
-            <div>
-              <Text className={classes.title2}>
-                <span className={classes.red}>Burn</span> Calories,Get <span className={classes.red}>Stronger</span> And <span className={classes.red}>Energise</span> Your System at The Same Time
-              </Text>
-              {/* <div className={classes.main}> */}
-              <Button variant="gradient" className="button-7" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={20} size="xl" radius="xl">
-                Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 5, marginRight: 5 }}> 300</span>  200 AED
-              </Button>
-            </div>
-          </Grid.Col>
-          <Grid.Col md={4} sm={12}>
-            <div className={classes.root}>
-              <div className={classes.main}>
-                <img
-                  src={days}
-
-                  className='days'
-                />
               </div>
-              <Grid>
-                <Grid.Col span={3}> <Text className="Time" weight={600}>12 &nbsp; :</Text><Text className="Days" color='#737270'>Days</Text> </Grid.Col>
-                <Grid.Col span={3}> <Text className="Time" weight={600}>18 &nbsp; :</Text><Text className="Days" color='#737270'>Hours</Text> </Grid.Col>
-                <Grid.Col span={3}> <Text className="Time" weight={600}>59 &nbsp; :</Text><Text className="Days" color='#737270'>Minutes</Text> </Grid.Col>
-                <Grid.Col span={3}> <Text className="Time" weight={600}>12 &nbsp; </Text><Text className="Days" color='#737270'>Seconds</Text> </Grid.Col>
-              </Grid>
-              <Button variant="gradient" className="button-71" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={20} size="md" radius="xl">
-                Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 5, marginRight: 5 }}> 300</span>  200 AED
-              </Button>
+              <div style={{ marginBottom: 50 }} className="hide">
+
+              </div>
             </div>
           </Grid.Col>
         </Grid>
+      </Container>
+      <Container size='lg' className={classes.marginandpadding} >
+
+        <div className={classes.borderRed}>
+          <Grid >
+            <Grid.Col md={8} sm={12} className={classes.borderRedPadding}>
+              <div>
+                <Text className={classes.title2}>
+                  No Two Classes are the <span className={classes.red}>SAME!</span>
+                </Text>
+                <Text className={classes.Subtitletitle2} color="#B0ADAA">Every Session Surprises The Body, Activates New Muscle And is Uniquely Designed to Give Maximum Results.</Text>
+                {/* <div className={classes.main}> */}
+                <Button variant="gradient" className="button-7" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={40} size="xl" radius="xl">
+                  Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 10, marginRight: 10 }}> 300</span> <span style={{ fontWeight: 600, fontSize: 22, marginRight: 5 }}>200 </span>  AED
+                </Button>
+              </div>
+            </Grid.Col>
+            <Grid.Col md={4} sm={12}>
+              <div className={classes.root}>
+                <div className={classes.main}>
+                  <img
+                    src={days}
+
+                    className='days'
+                  />
+                </div>
+                <Grid>
+                  <Grid.Col span={3}> <Text className="Time" weight={600}>12 &nbsp; :</Text><Text className="Days" color='#737270'>Days</Text> </Grid.Col>
+                  <Grid.Col span={3}> <Text className="Time" weight={600}>18 &nbsp; :</Text><Text className="Days" color='#737270'>Hours</Text> </Grid.Col>
+                  <Grid.Col span={3}> <Text className="Time" weight={600}>59 &nbsp; :</Text><Text className="Days" color='#737270'>Minutes</Text> </Grid.Col>
+                  <Grid.Col span={3}> <Text className="Time" weight={600}>12 &nbsp; </Text><Text className="Days" color='#737270'>Seconds</Text> </Grid.Col>
+                </Grid>
+                <div className={classes.main}>
+                  <Button variant="gradient" className="button-71" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={20} size="md" radius="xl">
+                    Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 10, marginRight: 10 }}> 300</span> 200 AED
+                  </Button>
+                </div>
+              </div>
+            </Grid.Col>
+          </Grid>
+        </div>
+
+
       </Container>
       <Container size="lg" className={classes.imagepadding}>
         <LazyShow>
@@ -601,39 +625,44 @@ const App = () => {
         </LazyShow>
       </Container>
       <Container size='lg' className={classes.marginandpadding}>
-        <Grid className={classes.borderRed}>
-          <Grid.Col md={8} sm={12} className={classes.borderRedPadding}>
-            <div>
-              <Text className={classes.title2}>
-                The majority of people gain back the weight they lose , <span className={classes.red}>But Not with RED!</span>
-              </Text>
-              <Text className={classes.Subtitletitle2} color="#B0ADAA">Do you think dieting and burning more calories is helping you?It may help for a short while but will make you gain back all the weight you have lose soon</Text>
-              {/* <div className={classes.main}> */}
-              <Button variant="gradient" className="button-7" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={20} size="xl" radius="xl">
-                Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 5, marginRight: 5 }}> 300</span>  200 AED
-              </Button>
-            </div>
-          </Grid.Col>
-          <Grid.Col md={4} sm={12} >
-            <div className={classes.root}>
-              <div className={classes.main}>
-                <img
-                  src={days}
-                  className='days'
-                />
+        <div className={classes.borderRed}>
+          <Grid >
+            <Grid.Col md={8} sm={12} className={classes.borderRedPadding}>
+              <div>
+                <Text className={classes.title2}>
+                  The majority of people gain back the weight they lose , <span className={classes.red}>But Not with RED!</span>
+                </Text>
+                <Text className={classes.Subtitletitle2} color="#B0ADAA">Do you think dieting and burning more calories is helping you?It may help for a short while but will make you gain back all the weight you have lose soon</Text>
+                {/* <div className={classes.main}> */}
+                <Button variant="gradient" className="button-7" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={20} size="xl" radius="xl">
+                  Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 10, marginRight: 10 }}> 300</span> <span style={{ fontWeight: 600, fontSize: 22, marginRight: 5 }}>200 </span>  AED
+                </Button>
               </div>
-              <Grid >
-                <Grid.Col span={3}> <Text className="Time" weight={600}>12 &nbsp; :</Text><Text className="Days" color='#737270'>Days</Text> </Grid.Col>
-                <Grid.Col span={3}> <Text className="Time" weight={600}>18 &nbsp; :</Text><Text className="Days" color='#737270'>Hours</Text> </Grid.Col>
-                <Grid.Col span={3}> <Text className="Time" weight={600}>59 &nbsp; :</Text><Text className="Days" color='#737270'>Minutes</Text> </Grid.Col>
-                <Grid.Col span={3}> <Text className="Time" weight={600}>12 &nbsp; </Text><Text className="Days" color='#737270'>Seconds</Text> </Grid.Col>
-              </Grid>
-              <Button variant="gradient" className="button-71" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={20} size="md" radius="xl">
-                Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 5, marginRight: 5 }}> 300</span>  200 AED
-              </Button>
-            </div>
-          </Grid.Col>
-        </Grid>
+            </Grid.Col>
+            <Grid.Col md={4} sm={12} className={classes.marginTop}>
+              <div className={classes.root}>
+                <div className={classes.main}>
+                  <img
+                    src={days}
+                    className='days'
+                  />
+                </div>
+                <Grid >
+                  <Grid.Col span={3}> <Text className="Time" weight={600}>12 &nbsp; :</Text><Text className="Days" color='#737270'>Days</Text> </Grid.Col>
+                  <Grid.Col span={3}> <Text className="Time" weight={600}>18 &nbsp; :</Text><Text className="Days" color='#737270'>Hours</Text> </Grid.Col>
+                  <Grid.Col span={3}> <Text className="Time" weight={600}>59 &nbsp; :</Text><Text className="Days" color='#737270'>Minutes</Text> </Grid.Col>
+                  <Grid.Col span={3}> <Text className="Time" weight={600}>12 &nbsp; </Text><Text className="Days" color='#737270'>Seconds</Text> </Grid.Col>
+                </Grid>
+                <div className={classes.main}>
+                  <Button variant="gradient" className="button-71" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={20} size="md" radius="xl">
+                    Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 10, marginRight: 10 }}> 300</span> 200  AED
+                  </Button>
+                </div>
+              </div>
+            </Grid.Col>
+          </Grid>
+        </div>
+
       </Container>
       <Container size="lg" className={classes.imagepadding}>
         <LazyShow>
@@ -646,38 +675,43 @@ const App = () => {
         </LazyShow>
       </Container>
       <Container size='lg' className={classes.marginandpadding} >
-        <Grid className={classes.borderRed}>
-          <Grid.Col md={8} sm={12} className={classes.borderRedPadding}>
-            <div>
-              <Text className={classes.title2}>
-                <span className={classes.red}>Burn</span> Calories,Get <span className={classes.red}>Stronger</span> And <span className={classes.red}>Energise</span> Your System at The Same Time
-              </Text>
-              {/* <div className={classes.main}> */}
-              <Button variant="gradient" className="button-7" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={20} size="xl" radius="xl">
-                Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 5, marginRight: 5 }}> 300</span>  200 AED
-              </Button>
-            </div>
-          </Grid.Col>
-          <Grid.Col md={4} sm={12}>
-            <div className={classes.root}>
-              <div className={classes.main}>
-                <img
-                  src={days}
-                  className='days'
-                />
+        <div className={classes.borderRed}>
+          <Grid >
+            <Grid.Col md={8} sm={12} className={classes.borderRedPadding}>
+              <div>
+                <Text className={classes.title2}>
+                  <span className={classes.red}>Burn</span> Calories,Get <span className={classes.red}>Stronger</span> And <span className={classes.red}>Energise</span> Your System at The Same Time
+                </Text>
+                {/* <div className={classes.main}> */}
+                <Button variant="gradient" className="button-7" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={30} size="xl" radius="xl">
+                  Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 10, marginRight: 10 }}> 300</span> <span style={{ fontWeight: 600, fontSize: 22, marginRight: 5 }}>200 </span>  AED
+                </Button>
               </div>
-              <Grid>
-                <Grid.Col span={3}> <Text className="Time" weight={600}>12 &nbsp; :</Text><Text className="Days" color='#737270'>Days</Text> </Grid.Col>
-                <Grid.Col span={3}> <Text className="Time" weight={600}>18 &nbsp; :</Text><Text className="Days" color='#737270'>Hours</Text> </Grid.Col>
-                <Grid.Col span={3}> <Text className="Time" weight={600}>59 &nbsp; :</Text><Text className="Days" color='#737270'>Minutes</Text> </Grid.Col>
-                <Grid.Col span={3}> <Text className="Time" weight={600}>12 &nbsp; </Text><Text className="Days" color='#737270'>Seconds</Text> </Grid.Col>
-              </Grid>
-              <Button variant="gradient" className="button-71" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={20} size="md" radius="xl">
-                Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 5, marginRight: 5 }}> 300</span>  200 AED
-              </Button>
-            </div>
-          </Grid.Col>
-        </Grid>
+            </Grid.Col>
+            <Grid.Col md={4} sm={12}>
+              <div className={classes.root}>
+                <div className={classes.main}>
+                  <img
+                    src={days}
+                    className='days'
+                  />
+                </div>
+                <Grid>
+                  <Grid.Col span={3}> <Text className="Time" weight={600}>12 &nbsp; :</Text><Text className="Days" color='#737270'>Days</Text> </Grid.Col>
+                  <Grid.Col span={3}> <Text className="Time" weight={600}>18 &nbsp; :</Text><Text className="Days" color='#737270'>Hours</Text> </Grid.Col>
+                  <Grid.Col span={3}> <Text className="Time" weight={600}>59 &nbsp; :</Text><Text className="Days" color='#737270'>Minutes</Text> </Grid.Col>
+                  <Grid.Col span={3}> <Text className="Time" weight={600}>12 &nbsp; </Text><Text className="Days" color='#737270'>Seconds</Text> </Grid.Col>
+                </Grid>
+                <div className={classes.main}>
+                  <Button variant="gradient" className="button-71" gradient={{ from: "#E11E71", to: '#7B4AD7', deg: 105 }} mt={20} size="md" radius="xl">
+                    Join Today for just  <span style={{ textDecoration: 'line-through', marginLeft: 10, marginRight: 10 }}> 300</span> 200 AED
+                  </Button>
+                </div>
+              </div>
+            </Grid.Col>
+          </Grid>
+        </div>
+
       </Container>
       {/* Accordion */}
       <Container size="lg" className={classes.marginTop2}>
