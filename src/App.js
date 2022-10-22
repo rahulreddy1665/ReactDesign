@@ -40,7 +40,7 @@ const useStyles = createStyles((theme) => ({
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundImage: `url(${bg})`,
-      height: 320,
+      height: 370,
     },
   },
   item: {
@@ -203,7 +203,7 @@ const useStyles = createStyles((theme) => ({
   Icon3: {
     width: 40, height: 40, color: 'red',
     [theme.fn.smallerThan("sm")]: {
-      width: 30, height: 30,
+      width: 40, height: 40,
     },
   },
   IconCenter: {
@@ -452,37 +452,38 @@ const App = () => {
         </LazyShow>
         <LazyShow>
           <div className="carousel">
-            <Carousel sx={{ maxWidth: 320 }} mx="auto" withIndicators withControls={false} height={200}>
-              <Carousel.Slide> <img
-                src={bgone}
-                style={{ width: 308 }}
-              /></Carousel.Slide>
+            <Carousel sx={{ maxWidth: 420 }} mx="auto" withIndicators withControls={false} height={200}>
+              <Carousel.Slide>
+                <img
+                  src={bgone}
+                  style={{ width: 383 }}
+                /></Carousel.Slide>
               <Carousel.Slide>
                 <img
                   src={bgtwo}
-                  style={{ width: 308 }}
+                  style={{ width: 383 }}
                 />
               </Carousel.Slide>
               <Carousel.Slide>
                 <img
                   src={bgthree}
-                  style={{ width: 308 }}
+                  style={{ width: 383 }}
                 />
               </Carousel.Slide>
               <Carousel.Slide> <img
                 src={bgone}
-                style={{ width: 308 }}
+                style={{ width: 383 }}
               /></Carousel.Slide>
               <Carousel.Slide>
                 <img
                   src={bgtwo}
-                  style={{ width: 308 }}
+                  style={{ width: 383 }}
                 />
               </Carousel.Slide>
               <Carousel.Slide>
                 <img
                   src={bgthree}
-                  style={{ width: 308 }}
+                  style={{ width: 383 }}
                 />
               </Carousel.Slide>
               {/* ...other slides */}

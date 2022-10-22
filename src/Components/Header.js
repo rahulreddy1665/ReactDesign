@@ -87,7 +87,7 @@ export default function Header({ children }) {
                             </Button>
                         </Group>
                         <Group spacing={5} className="mobile_links">
-                            <div style={{ display: 'flex', flexDirection: 'row', marginLeft: 50 }}>
+                            <div style={{ display: 'flex', flexDirection: 'row', marginLeft: 110 }}>
                                 <Button
                                     radius="xl"
                                     size="xs"
